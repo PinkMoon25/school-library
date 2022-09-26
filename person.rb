@@ -23,11 +23,3 @@ class Person
     false
   end
 end
-
-person = Person.new(25)
-p person
-p person.can_use_services?
-
-person2 = Person.new(16, 'Tushar', false)
-p person2
-p person2.can_use_services?
