@@ -12,10 +12,3 @@ class Student < Person
     "¯\(ツ)/¯"
   end
 end
-
-guy = Student.new(18, 'computer science', 'Tushar')
-p guy
-p guy.classroom
-p guy.id
-p guy.name
-p guy.can_use_services?
