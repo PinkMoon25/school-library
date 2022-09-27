@@ -1,4 +1,6 @@
-class Person
+require './nameable'
+
+class Person < Nameable
   attr_reader :id
   attr_accessor :name, :age
 
@@ -7,12 +9,17 @@ class Person
     @age = age
     @parent_permission = parent_permission
     @id = Random.rand(1..1000)
+    super()
   end
 
   def can_use_services?
     return true if of_age? || @parent_permission
 
     false
+  end
+
+  def correct_name
+    @name
   end
 
   private
