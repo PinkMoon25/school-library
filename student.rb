@@ -1,8 +1,10 @@
 require './person'
 
 class Student < Person
+  attr_accessor :classroom
+
   def initialize(age, classroom, name = 'unknown', parent_permission: true)
-    super(age, name, parent_permission)
+    super(age, name, parent_permission: parent_permission)
     @classroom = classroom
   end
 
@@ -11,7 +13,9 @@ class Student < Person
   end
 end
 
-student = Student.new(15, 15)
-p student
-p student.can_use_services?
-p student.play_hooky
+guy = Student.new(18, 'computer science', 'Tushar')
+p guy
+p guy.classroom
+p guy.id
+p guy.name
+p guy.can_use_services?
