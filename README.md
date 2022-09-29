@@ -24,6 +24,13 @@ To get a working local copy up and running follow these simple steps
 git clone https://github.com/PinkMoon25/school-library.git
 
 ```
+Navigate to school-library folder/directory
+
+```
+cd school-library/ruby
+
+```
+Next, run ```ruby main.rb``` which will run the app in the development mode.
 
 ### Usage
 
