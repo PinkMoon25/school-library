@@ -72,7 +72,7 @@ class App
   end
 
   def create_rental
-    puts 'Select Book from the list by number(not id):'
+    puts 'Select Book from the list by number:'
     list_books
     user_input_book = gets.chomp.to_i
     book = @books[user_input_book]
@@ -85,9 +85,17 @@ class App
     @rentals.push(Rental.new(date, book, person)) if book && person
     puts 'Rental created successfully'
   end
+
+  def list_rentals
+    print 'Id of the Person: '
+    person_id = gets.chomp.to_i
+    @rentals.select {|i| i.person.id == person_id}
+    @rentals.each_with_index {|r| puts "Date: #{r.date}, Book #{r.book.title} by #{r.book.author}"}
+  end
 end
 
 app = App.new
 app.create_person
 app.create_book
 app.create_rental
+app.list_rentals
