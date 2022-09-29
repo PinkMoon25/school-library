@@ -89,7 +89,8 @@ class App
   def list_rentals
     print 'Id of the Person: '
     person_id = gets.chomp.to_i
-    @rentals.select {|i| i.person.id == person_id}
-    @rentals.each_with_index {|r| puts "Date: #{r.date}, Book #{r.book.title} by #{r.book.author}"}
+    select_rentals = @rentals.select { |i| i.person.id == person_id }
+    puts "No person with id: #{person_id}" if select_rentals.empty?
+    select_rentals.each { |r| puts "Date: #{r.date}, Book #{r.book.title} by #{r.book.author}" }
   end
 end
