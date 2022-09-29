@@ -62,8 +62,16 @@ class App
       puts 'Incorrect input'
     end
   end
+
+  def list_books
+    @books.each_with_index { |book, idx| puts "#{idx}) Title: #{book.title}, Author: #{book.author}" }
+  end
+
+  def list_people
+    @people.each_with_index { |p, idx| puts "#{idx}) [#{p.class}] Name: #{p.name}, Age: #{p.age}, Id: #{p.id}" }
+  end
 end
 
 app = App.new
 app.create_person
-p app.people
+app.list_people
