@@ -70,8 +70,24 @@ class App
   def list_people
     @people.each_with_index { |p, idx| puts "#{idx}) [#{p.class}] Name: #{p.name}, Age: #{p.age}, Id: #{p.id}" }
   end
+
+  def create_rental
+    puts 'Select Book from the list by number(not id):'
+    list_books
+    user_input_book = gets.chomp.to_i
+    book = @books[user_input_book]
+    puts 'Select a person from the list by number(not id):'
+    list_people
+    user_input_person = gets.chomp.to_i
+    person = @people[user_input_person]
+    print 'Date: '
+    date = gets.chomp
+    @rentals.push(Rental.new(date, book, person)) if book && person
+    puts 'Rental created successfully'
+  end
 end
 
 app = App.new
 app.create_person
-app.list_people
+app.create_book
+app.create_rental
