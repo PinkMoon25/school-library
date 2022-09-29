@@ -93,9 +93,3 @@ class App
     @rentals.each_with_index {|r| puts "Date: #{r.date}, Book #{r.book.title} by #{r.book.author}"}
   end
 end
-
-app = App.new
-app.create_person
-app.create_book
-app.create_rental
-app.list_rentals
