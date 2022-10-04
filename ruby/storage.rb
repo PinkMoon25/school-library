@@ -55,15 +55,5 @@ class Storage
       end
     end
   end
-
-  def load_books(app)
-    if(File.size?('./data/books.json'))
-      file = File.read('./data/books.json')
-      stored_books = JSON.parse(file)
-      stored_books.map do |b|
-        app.books.push(Book.new(b['title'], b['author']))
-      end
-    end
-  end
 end
 

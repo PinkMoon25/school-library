@@ -8,5 +8,15 @@
     "type": "Teacher",
     "Name": "sefwgfw",
     "Age": "345"
+  },
+  {
+    "type": "Teacher",
+    "Name": "tomnas",
+    "Age": "50"
+  },
+  {
+    "type": "Student",
+    "Name": "jhon",
+    "Age": "34"
   }
 ]

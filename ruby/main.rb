@@ -7,7 +7,6 @@ puts "Welcome to school library app
 
 def main(app = App.new())
   storage = Storage.new()
-  storage.load_books(app)
   puts 'Please select an option by entering the following number:
 
     1. List all books

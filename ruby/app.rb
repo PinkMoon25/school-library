@@ -76,7 +76,13 @@ class App
   end
 
   def list_people
-    @people.each_with_index { |p, idx| puts "#{idx}) [#{p.class}] Name: #{p.name}, Age: #{p.age}, Id: #{p.id}" }
+    if File.exist?('./data/people.json')
+      file = File.read('./data/people.json')
+      data_hash = JSON.parse(file)
+      data_hash.each do |person|
+        puts " Type: #{person['type']}, Name: #{person['Name']}, Age: #{person['Age']}"
+      end
+    end
   end
 
   def create_rental
