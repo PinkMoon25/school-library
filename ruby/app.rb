@@ -6,6 +6,7 @@ require_relative 'teacher'
 require_relative 'nameable'
 require_relative 'classroom'
 require_relative 'decorator'
+require 'json'
 
 class App
   attr_accessor :books, :people, :rentals
@@ -65,7 +66,13 @@ class App
   end
 
   def list_books
-    @books.each_with_index { |book, idx| puts "#{idx}) Title: #{book.title}, Author: #{book.author}" }
+    if File.exist?('./data/books.json')
+      file = File.read('./data/books.json')
+      data_hash = JSON.parse(file)
+      data_hash.each do |book|
+        puts "Title: #{book['title']}, Author: #{book['author']}"
+      end
+    end
   end
 
   def list_people
