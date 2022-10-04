@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require_relative 'app'
+require_relative 'storage'
 
 puts "Welcome to school library app
 \n"
@@ -18,6 +19,10 @@ def main(app = App.new())
   user_input = gets.chomp.to_i
   select_method(user_input, app)
   if user_input == 7
+    storage = Storage.new()
+    storage.store_books(app.books)
+    storage.store_people(app.people)
+    storage.store_rentals(app.rentals)
     puts 'Thank you for using the app'
     exit
   end
