@@ -80,7 +80,7 @@ class App
       file = File.read('./data/people.json')
       data_hash = JSON.parse(file)
       data_hash.each do |person|
-        puts " Type: #{person['type']}, Name: #{person['Name']}, Age: #{person['Age']}"
+        puts "ID: #{person['id']} Type: #{person['type']}, Name: #{person['Name']}, Age: #{person['Age']}"
       end
     end
   end

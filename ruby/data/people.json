@@ -18,5 +18,10 @@
     "type": "Student",
     "Name": "jhon",
     "Age": "34"
+  },
+  {
+    "type": "Teacher",
+    "Name": "nomu",
+    "Age": "23"
   }
 ]

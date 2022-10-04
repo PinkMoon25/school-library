@@ -50,7 +50,7 @@ class Storage
         end
       else
         File.open('./data/rentals.json', 'w') do |f|
-          f.write(JSON.pretty_generate([{ Date: rental.date, book: rental.book.title, Person: rental.person.name }]))
+          f.write(JSON.pretty_generate([{ ID: rental.person.id, Date: rental.date, book: rental.book.title, Person: rental.person.name }]))
         end
       end
     end
