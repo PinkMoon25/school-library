@@ -8,7 +8,7 @@ require_relative 'classroom'
 require_relative 'decorator'
 
 class App
-  attr_reader :books, :people, :rentals
+  attr_accessor :books, :people, :rentals
 
   def initialize
     @books = []
@@ -23,6 +23,7 @@ class App
     author = gets.chomp
     @books.push(Book.new(title, author)) if title && author
     puts 'Book created successfully'
+    p @books
   end
 
   def create_student
