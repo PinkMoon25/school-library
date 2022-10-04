@@ -1,21 +1,15 @@
 [
   {
-    "title": "ruby",
-    "author": "marting"
-  }
-][
+    "type": "Teacher",
+    "Name": "Tushar",
+    "Age": "30"
+  },
   {
-    "title": "ruby",
-    "author": "tdjd"
-  }
-][
+    "title": "abc",
+    "author": "a"
+  },
   {
-    "title": "javascript",
-    "author": "web"
-  }
-][
-  {
-    "title": "somethung in the qRT",
-    "author": "NIRVAMA"
+    "title": "afagfea",
+    "author": "afagfa"
   }
 ]
