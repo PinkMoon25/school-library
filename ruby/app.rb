@@ -31,9 +31,9 @@ class App
       books_file = JSON.parse(file)
       books_file << { title: title, author: author }
       File.write('./data/books.json', JSON.pretty_generate(books_file))
-      else
-        File.write('./data/books.json', JSON.pretty_generate([{ title: title, author: author }]))
-      end
+    else
+      File.write('./data/books.json', JSON.pretty_generate([{ title: title, author: author }]))
+    end
     puts 'Book created successfully'
   end
 
@@ -51,11 +51,11 @@ class App
     if File.size?('./data/people.json')
       file = File.read('./data/people.json')
       student_file = JSON.parse(file)
-      student_file << { type:'Student', Classroom: classroom , Name: name, Age: age}
+      student_file << { type: 'Student', Classroom: classroom, Name: name, Age: age }
       File.write('./data/people.json', JSON.pretty_generate(student_file))
     else
       File.write('./data/people.json',
-                 JSON.pretty_generate([{ type:'Student', Classroom: classroom , Name: name, Age: age}]))
+                 JSON.pretty_generate([{ type: 'Student', Classroom: classroom, Name: name, Age: age }]))
     end
     puts 'Student created successfully'
   end
@@ -71,11 +71,11 @@ class App
     if File.size?('./data/people.json')
       file = File.read('./data/people.json')
       teacher_file = JSON.parse(file)
-      teacher_file << { type:'Teacher', specialization: specialization , Name: name, Age: age}
+      teacher_file << { type: 'Teacher', specialization: specialization, Name: name, Age: age }
       File.write('./data/people.json', JSON.pretty_generate(teacher_file))
     else
       File.write('./data/people.json',
-                 JSON.pretty_generate([{ type:'Teacher', specialization: specialization , Name: name, Age: age}]))
+                 JSON.pretty_generate([{ type: 'Teacher', specialization: specialization, Name: name, Age: age }]))
     end
     puts 'Teacher created successfully'
   end
@@ -117,12 +117,12 @@ class App
       file = File.read('./data/rentals.json')
       rentals_file = JSON.parse(file)
       rentals_file << { Date: date, title: book.title, author: book.author, age: person.age, name:
-      person.name, id: person.id}
+      person.name, id: person.id }
 
       File.write('./data/rentals.json', JSON.pretty_generate(rentals_file))
     else
       File.write('./data/rentals.json', JSON.pretty_generate([{ Date: date, title: book.title, author: book.author, age: person.age, name:
-        person.name, id: person.id}]))
+        person.name, id: person.id }]))
     end
     puts 'Rental created successfully'
   end
