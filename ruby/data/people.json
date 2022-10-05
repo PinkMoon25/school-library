@@ -1,27 +1,26 @@
 [
   {
     "type": "Student",
-    "Name": "dgsrgs",
-    "Age": "23"
-  },
-  {
-    "type": "Teacher",
-    "Name": "sefwgfw",
-    "Age": "345"
-  },
-  {
-    "type": "Teacher",
-    "Name": "tomnas",
-    "Age": "50"
+    "Classroom": "ryby",
+    "Name": "Sid",
+    "Age": "15"
   },
   {
     "type": "Student",
-    "Name": "jhon",
-    "Age": "34"
+    "Classroom": "ruby",
+    "Name": "sid",
+    "Age": "23"
   },
   {
     "type": "Teacher",
-    "Name": "nomu",
-    "Age": "23"
+    "specialization": "ruby",
+    "Name": "Nicj",
+    "Age": "45"
+  },
+  {
+    "type": "Student",
+    "Classroom": "ruby",
+    "Name": "all",
+    "Age": "25"
   }
 ]
