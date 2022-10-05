@@ -113,18 +113,22 @@ class App
     print 'Date: '
     date = gets.chomp
     @rentals.push(Rental.new(date, book, person)) if book && person
+    save_rentals(date, book, person)
+    puts 'Rental created successfully'
+  end
+
+  def save_rentals(date, book, person)
     if File.size?('./data/rentals.json')
       file = File.read('./data/rentals.json')
       rentals_file = JSON.parse(file)
-      rentals_file << { Date: date, title: book.title, author: book.author, age: person.age, name:
-      person.name, id: person.id }
-
+      rentals_file << { Date: date, title: book.title, author: book.author, age: person.age,
+                        name: person.name, id: person.id }
       File.write('./data/rentals.json', JSON.pretty_generate(rentals_file))
     else
-      File.write('./data/rentals.json', JSON.pretty_generate([{ Date: date, title: book.title, author: book.author, age: person.age, name:
-        person.name, id: person.id }]))
+      File.write('./data/rentals.json',
+                 JSON.pretty_generate([{ Date: date, title: book.title, author: book.author, age: person.age,
+                                         name: person.name, id: person.id }]))
     end
-    puts 'Rental created successfully'
   end
 
   def list_rentals
