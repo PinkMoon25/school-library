@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Student",
+    "Classroom": "ryby",
+    "Name": "Sid",
+    "Age": "15"
+  },
+  {
+    "type": "Student",
+    "Classroom": "ruby",
+    "Name": "sid",
+    "Age": "23"
+  },
+  {
+    "type": "Teacher",
+    "specialization": "ruby",
+    "Name": "Nicj",
+    "Age": "45"
+  },
+  {
+    "type": "Student",
+    "Classroom": "ruby",
+    "Name": "all",
+    "Age": "25"
+  }
+]
